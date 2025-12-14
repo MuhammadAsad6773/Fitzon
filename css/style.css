@@ -1,0 +1,301 @@
+/* =========================
+   Global Styles
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: #f6f7f8;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  padding: 60px 8%;
+}
+
+h1, h2, h3, h4 {
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+p {
+  max-width: 700px;
+}
+
+/* =========================
+   Header & Navigation
+========================= */
+header {
+  background: #111;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  color: #ddd;
+  font-size: 15px;
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+
+.menu-icon {
+  display: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* =========================
+   Hero Sections
+========================= */
+.hero,
+.about-hero,
+.pricing-hero,
+.gallery-hero,
+.contact-hero {
+  background: #111;
+  color: #fff;
+  text-align: center;
+}
+
+.hero h1,
+.about-hero h1,
+.pricing-hero h1,
+.gallery-hero h1,
+.contact-hero h1 {
+  font-size: 42px;
+}
+
+.hero p,
+.about-hero p,
+.pricing-hero p,
+.gallery-hero p,
+.contact-hero p {
+  margin: 15px auto 25px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #e63946;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #c92d3a;
+}
+
+/* =========================
+   Features & Programs
+========================= */
+.feature-grid,
+.program-list,
+.value-grid,
+.trainer-grid,
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.feature,
+.program,
+.value,
+.trainer,
+.info-box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 6px;
+}
+
+/* =========================
+   Pricing Cards
+========================= */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 22px;
+}
+
+.card .price {
+  font-size: 20px;
+  margin: 15px 0;
+  color: #e63946;
+}
+
+.card ul {
+  list-style: none;
+}
+
+.card ul li {
+  margin: 10px 0;
+}
+
+.card.featured {
+  border: 2px solid #e63946;
+}
+
+/* =========================
+   Gallery
+========================= */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.gallery-item {
+  background: #fff;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.img-box {
+  width: 100%;
+  height: 180px;
+  background: #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   Contact Form
+========================= */
+.contact-form {
+  max-width: 500px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form button {
+  background: #e63946;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #c92d3a;
+}
+
+/* =========================
+   Footer
+========================= */
+footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    right: 8%;
+    padding: 15px;
+  }
+
+  .nav-links a {
+    margin: 10px 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+}
+/* Gallery images from Unsplash */
+.gallery-item:nth-child(1) .img-box {
+  background-image: url('https://images.unsplash.com/photo-1558611848-73f7eb4001a1');
+}
+
+.gallery-item:nth-child(2) .img-box {
+  background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b');
+}
+
+.gallery-item:nth-child(3) .img-box {
+  background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80');
+}
+
+
+.gallery-item:nth-child(4) .img-box {
+  background-image: url('https://images.unsplash.com/photo-1576678927484-cc907957088c');
+}
+
+.gallery-item:nth-child(5) .img-box {
+  background-image: url('https://source.unsplash.com/800x600/?gym,training');
+}
+
+
+.gallery-item:nth-child(6) .img-box {
+  background-image: url('https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80');
+}
+
+
+.img-box {
+  background-size: cover;
+  background-position: center;
+}
